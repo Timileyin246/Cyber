@@ -14,7 +14,7 @@
     <!-- Full page -->
     <div>
         <!-- Nav bar -->
-        <nav class="flex items-center justify-between px-[100px] py-[16px] bg-[#FFFFFF] max-sm:px-[16px] max-sm:py-[24px]">
+        <nav class="flex items-center justify-between px-[100px] py-[16px] bg-[#FFFFFF] max-sm:px-[16px] max-sm:py-[24px] max-sm:relative max-sm:flex-wrap">
             <img class="w-[96px] h-[32px]" src="./media/logo 1.png" alt="logo">
             <div class="relative max-sm:hidden">
                 <i class="fa-solid fa-magnifying-glass fa-lg text-[#989898] absolute top-[52%] left-[5%]"></i>
@@ -29,7 +29,28 @@
             <div class="flex items-center gap-[24px]">
                 <button onclick="openCart()" class="cursor-pointer"><i class="fa-solid fa-cart-shopping"></i></button>
                 <button class="cursor-pointer max-sm:hidden"><i class="fa-regular fa-user"></i></button>
-                <button class="md:hidden cursor-pointer"><i class="fa-solid fa-bars"></i></button>
+
+                <label for="mobile-menu" class="md:hidden cursor-pointer">
+                    <i class="fa-solid fa-bars"></i>
+                </label>
+                
+            </div>
+
+            <!-- Mobile dropdown -->
+            <input type="checkbox" id="mobile-menu" class="hidden peer">
+            <div class="hidden max-sm:flex flex-col items-start gap-[20px] absolute top-[72px] left-0 right-0 bg-[#FFFFFF] px-[16px] py-[24px] shadow-md z-50 max-h-0 overflow-hidden opacity-0 peer-checked:max-h-[500px] peer-checked:opacity-100">
+                <div class="relative w-full">
+                    <i class="fa-solid fa-magnifying-glass fa-lg text-[#989898] absolute top-[50%] -translate-y-1/2 left-[14px]"></i>
+                    <input class="w-full h-[56px] bg-[#F5F5F5] rounded-[8px] px-[50px] text-[#656565] text-[14px] font-medium" type="text" placeholder="search">
+                </div>
+                <ul class="flex flex-col gap-[16px] w-full">
+                    <a href="#"><li class="text-[16px] font-medium text-[#B5B5B5] hover:text-[#000000]">Home</li></a>
+                    <a href="#"><li class="text-[16px] font-medium text-[#B5B5B5] hover:text-[#000000]">About</li></a>
+                    <a href="#"><li class="text-[16px] font-medium text-[#B5B5B5] hover:text-[#000000]">Contact Us</li></a>
+                    <a href="#"><li class="text-[16px] font-medium text-[#B5B5B5] hover:text-[#000000]">Blog</li></a>
+                </ul>
+
+                <button class="cursor-pointer"><i class="fa-regular fa-user"></i>Profile</button>
             </div>
         </nav>
 
@@ -53,28 +74,28 @@
         <!-- Browse By Category -->
         <div class="px-[16px] py-[64px] md:px-[100px] py-[80px] flex flex-col gap-[48px] md:gap-[32px] bg-[#FAFAFA] w-full">
             <h1 class="text-[24px] text-[#000000] font-medium">Browse By Category</h1>
-            <div class="grid max-sm:grid-cols-2 gap-[16px] grid-cols-6">
-                <button class="w-[150px] h-[128px] bg-[#EDEDED] px-[52px] py-[24px] rounded-[15px] cursor-pointer flex flex-col items-center gap-[8px] transition-transform duration-150 hover:scale-105">
+            <div class="grid max-sm:grid-cols-2 gap-[20px] grid-cols-6">
+                <button class="w-[150px] max-sm:w-auto h-[128px] bg-[#EDEDED] px-[52px] py-[24px] rounded-[15px] cursor-pointer flex flex-col items-center gap-[8px] transition-transform duration-150 hover:scale-105">
                     <img class="w-[45px] h-[45px]" src="./media/Phones.png" alt="phone image">
                     <p class="font-medium text-[14px] text-[#000000]">Phones</p>
                 </button>
-                <button class="w-[150px] h-[128px] bg-[#EDEDED] px-[52px] py-[24px] rounded-[15px] cursor-pointer flex flex-col items-center gap-[8px] transition-transform duration-150 hover:scale-105">
+                <button class="w-[150px] max-sm:w-auto h-[128px] bg-[#EDEDED] px-[52px] py-[24px] rounded-[15px] cursor-pointer flex flex-col items-center gap-[8px] transition-transform duration-150 hover:scale-105">
                     <img class="w-[45px] h-[45px]" src="./media/Smart Watches.png" alt="">
                     <p class="font-medium text-[14px] text-[#000000] w-[117px]">Smart Watches</p>
                 </button>
-                <button class="w-[150px] h-[128px] bg-[#EDEDED] px-[52px] py-[24px] rounded-[15px] cursor-pointer flex flex-col items-center gap-[8px] transition-transform duration-150 hover:scale-105">
+                <button class="w-[150px] max-sm:w-auto h-[128px] bg-[#EDEDED] px-[52px] py-[24px] rounded-[15px] cursor-pointer flex flex-col items-center gap-[8px] transition-transform duration-150 hover:scale-105">
                     <img class="w-[45px] h-[45px]" src="./media/Cameras.png" alt="">
                     <p class="font-medium text-[14px] text-[#000000]">Cameras</p>
                 </button>
-                <button class="w-[150px] h-[128px] bg-[#EDEDED] px-[52px] py-[24px] rounded-[15px] cursor-pointer flex flex-col items-center gap-[8px] transition-transform duration-150 hover:scale-105">
+                <button class="w-[150px] max-sm:w-auto h-[128px] bg-[#EDEDED] px-[52px] py-[24px] rounded-[15px] cursor-pointer flex flex-col items-center gap-[8px] transition-transform duration-150 hover:scale-105">
                     <img class="w-[45px] h-[45px]" src="./media/Headphones.png" alt="">
                     <p class="font-medium text-[14px] text-[#000000]">Headphones</p>
                 </button>
-                <button class="w-[150px] h-[128px] bg-[#EDEDED] px-[52px] py-[24px] rounded-[15px] cursor-pointer flex flex-col items-center gap-[8px] transition-transform duration-150 hover:scale-105">
+                <button class="w-[150px] max-sm:w-auto h-[128px] bg-[#EDEDED] px-[52px] py-[24px] rounded-[15px] cursor-pointer flex flex-col items-center gap-[8px] transition-transform duration-150 hover:scale-105">
                     <img class="w-[45px] h-[45px]" src="./media/Computers.png" alt="">
                     <p class="font-medium text-[14px] text-[#000000]">Computers</p>
                 </button>
-                <button class="w-[150px] h-[128px] bg-[#EDEDED] px-[52px] py-[24px] rounded-[15px] cursor-pointer flex flex-col items-center gap-[8px] transition-transform duration-150 hover:scale-105">
+                <button class="w-[150px] max-sm:w-auto h-[128px] bg-[#EDEDED] px-[52px] py-[24px] rounded-[15px] cursor-pointer flex flex-col items-center gap-[8px] transition-transform duration-150 hover:scale-105">
                     <img class="w-[45px] h-[45px]" src="./media/Gaming.png" alt="">
                     <p class="font-medium text-[14px] text-[#000000]">Gaming</p>
                 </button>
@@ -179,7 +200,7 @@
 
         <!-- Banner -->
         <div class="bg-[url('background.png')] bg-contain bg-center bg-no-repeat h-[395px] max-sm:bg-cover max-sm:h-full content-center">
-            <div class="flex flex-col items-center gap-[40px] max-sm:px-[16px]">
+            <div class="flex flex-col items-center gap-[40px] max-sm:px-[16px] max-sm:py-[100px]">
                 <div>
                     <h1 class="font-thin max-sm:text-[48px] max-sm:text-center text-[72px] text-[#FFFFFF]">Big Summer <span class="font-medium">Sale</span></h1>
                     <p class="font-regular max-sm:text-center text-[16px] text-[#787878]">Commodo fames vitae vitae leo mauris in. Eu consequat.</p>
