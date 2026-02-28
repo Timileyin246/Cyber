@@ -73,4 +73,88 @@ function closeCart() {
     document.getElementById('cartSidebar').classList.add('translate-x-full');
 }
 
+function openCatalogue() {
+    document.getElementById('fullPage').classList.add('hidden');
+    document.getElementById('catalogue').classList.remove('hidden');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function closeCatalogue() {
+    document.getElementById('catalogue').classList.add('hidden');
+    document.getElementById('fullPage').classList.remove('hidden');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function phones() {
+    document.getElementById('fullPage').classList.add('hidden');
+    document.getElementById('phones').classList.remove('hidden');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function closePhones() {
+    document.getElementById('phones').classList.add('hidden');
+    document.getElementById('fullPage').classList.remove('hidden');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function smartWatches() {
+    document.getElementById('fullPage').classList.add('hidden');
+    document.getElementById('smartWatches').classList.remove('hidden');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function closeSmartWatches() {
+    document.getElementById('smartWatches').classList.add('hidden');
+    document.getElementById('fullPage').classList.remove('hidden');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function cameras() {
+    document.getElementById('fullPage').classList.add('hidden');
+    document.getElementById('cameras').classList.remove('hidden');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function closeCameras() {
+    document.getElementById('cameras').classList.add('hidden');
+    document.getElementById('fullPage').classList.remove('hidden');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function headphones() {
+    document.getElementById('fullPage').classList.add('hidden');
+    document.getElementById('headphones').classList.remove('hidden');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function closeHeadphones() {
+    document.getElementById('headphones').classList.add('hidden');
+    document.getElementById('fullPage').classList.remove('hidden');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function computers() {
+    document.getElementById('fullPage').classList.add('hidden');
+    document.getElementById('computers').classList.remove('hidden');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function closeComputers() {
+    document.getElementById('computers').classList.add('hidden');
+    document.getElementById('fullPage').classList.remove('hidden');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function gaming() {
+    document.getElementById('fullPage').classList.add('hidden');
+    document.getElementById('gaming').classList.remove('hidden');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function closeGaming() {
+    document.getElementById('gaming').classList.add('hidden');
+    document.getElementById('fullPage').classList.remove('hidden');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
 updateCart();

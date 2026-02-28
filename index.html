@@ -11,49 +11,50 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Khand:wght@300;400;500;600;700&family=Outfit:wght@100..900&family=Oxygen:wght@300;400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Science+Gothic:wght@100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body class="font-['Inter']">
-    <!-- Full page -->
-    <div>
-        <!-- Nav bar -->
-        <nav class="flex items-center justify-between px-[100px] py-[16px] bg-[#FFFFFF] max-sm:px-[16px] max-sm:py-[24px] max-sm:relative max-sm:flex-wrap">
-            <img class="w-[96px] h-[32px]" src="./media/logo 1.png" alt="logo">
-            <div class="relative max-sm:hidden">
-                <i class="fa-solid fa-magnifying-glass fa-lg text-[#989898] absolute top-[52%] left-[5%]"></i>
-                <input class="w-[372px] h-[56px] bg-[#F5F5F5] rounded-[8px] px-[50px] text-[#656565] text-[14px] font-medium" type="text" placeholder="search">
+    
+    <!-- Nav bar -->
+    <nav class="flex items-center justify-between px-[100px] py-[16px] bg-[#FFFFFF] max-sm:px-[16px] max-sm:py-[24px] max-sm:relative max-sm:flex-wrap">
+        <img class="w-[96px] h-[32px]" src="./media/logo 1.png" alt="logo">
+        <div class="relative max-sm:hidden">
+            <i class="fa-solid fa-magnifying-glass fa-lg text-[#989898] absolute top-[52%] left-[5%]"></i>
+            <input class="w-[372px] h-[56px] bg-[#F5F5F5] rounded-[8px] px-[50px] text-[#656565] text-[14px] font-medium" type="text" placeholder="search">
+        </div>
+        <ul class="flex items-center gap-[30px] max-sm:hidden">
+            <a href="#"><li class="text-[16px] font-medium text-[#B5B5B5] hover:text-[#000000]">Home</li></a>
+            <a href="#"><li class="text-[16px] font-medium text-[#B5B5B5] hover:text-[#000000]">About</li></a>
+            <a href="#"><li class="text-[16px] font-medium text-[#B5B5B5] hover:text-[#000000]">Contact Us</li></a>
+            <a href="#"><li class="text-[16px] font-medium text-[#B5B5B5] hover:text-[#000000]">Blog</li></a>
+        </ul>
+        <div class="flex items-center gap-[24px]">
+            <button onclick="openCart()" class="cursor-pointer"><i class="fa-solid fa-cart-shopping"></i></button>
+            <button class="cursor-pointer max-sm:hidden"><i class="fa-regular fa-user"></i></button>
+
+            <label for="mobile-menu" class="md:hidden cursor-pointer">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+            
+        </div>
+
+        <!-- Mobile dropdown -->
+        <input type="checkbox" id="mobile-menu" class="hidden peer">
+        <div class="hidden max-sm:flex flex-col items-start gap-[20px] absolute top-[72px] left-0 right-0 bg-[#FFFFFF] px-[16px] py-[24px] shadow-md z-50 max-h-0 overflow-hidden opacity-0 peer-checked:max-h-[500px] peer-checked:opacity-100">
+            <div class="relative w-full">
+                <i class="fa-solid fa-magnifying-glass fa-lg text-[#989898] absolute top-[50%] -translate-y-1/2 left-[14px]"></i>
+                <input class="w-full h-[56px] bg-[#F5F5F5] rounded-[8px] px-[50px] text-[#656565] text-[14px] font-medium" type="text" placeholder="search">
             </div>
-            <ul class="flex items-center gap-[30px] max-sm:hidden">
+            <ul class="flex flex-col gap-[16px] w-full">
                 <a href="#"><li class="text-[16px] font-medium text-[#B5B5B5] hover:text-[#000000]">Home</li></a>
                 <a href="#"><li class="text-[16px] font-medium text-[#B5B5B5] hover:text-[#000000]">About</li></a>
                 <a href="#"><li class="text-[16px] font-medium text-[#B5B5B5] hover:text-[#000000]">Contact Us</li></a>
                 <a href="#"><li class="text-[16px] font-medium text-[#B5B5B5] hover:text-[#000000]">Blog</li></a>
             </ul>
-            <div class="flex items-center gap-[24px]">
-                <button onclick="openCart()" class="cursor-pointer"><i class="fa-solid fa-cart-shopping"></i></button>
-                <button class="cursor-pointer max-sm:hidden"><i class="fa-regular fa-user"></i></button>
 
-                <label for="mobile-menu" class="md:hidden cursor-pointer">
-                    <i class="fa-solid fa-bars"></i>
-                </label>
-                
-            </div>
+            <button class="cursor-pointer"><i class="fa-regular fa-user"></i>Profile</button>
+        </div>
+    </nav>
 
-            <!-- Mobile dropdown -->
-            <input type="checkbox" id="mobile-menu" class="hidden peer">
-            <div class="hidden max-sm:flex flex-col items-start gap-[20px] absolute top-[72px] left-0 right-0 bg-[#FFFFFF] px-[16px] py-[24px] shadow-md z-50 max-h-0 overflow-hidden opacity-0 peer-checked:max-h-[500px] peer-checked:opacity-100">
-                <div class="relative w-full">
-                    <i class="fa-solid fa-magnifying-glass fa-lg text-[#989898] absolute top-[50%] -translate-y-1/2 left-[14px]"></i>
-                    <input class="w-full h-[56px] bg-[#F5F5F5] rounded-[8px] px-[50px] text-[#656565] text-[14px] font-medium" type="text" placeholder="search">
-                </div>
-                <ul class="flex flex-col gap-[16px] w-full">
-                    <a href="#"><li class="text-[16px] font-medium text-[#B5B5B5] hover:text-[#000000]">Home</li></a>
-                    <a href="#"><li class="text-[16px] font-medium text-[#B5B5B5] hover:text-[#000000]">About</li></a>
-                    <a href="#"><li class="text-[16px] font-medium text-[#B5B5B5] hover:text-[#000000]">Contact Us</li></a>
-                    <a href="#"><li class="text-[16px] font-medium text-[#B5B5B5] hover:text-[#000000]">Blog</li></a>
-                </ul>
-
-                <button class="cursor-pointer"><i class="fa-regular fa-user"></i>Profile</button>
-            </div>
-        </nav>
-
+    <!-- Full page -->
+    <div id="fullPage">
         <!-- Hero section -->
         <div class="bg-[#211C24]">
             <div class="max-sm:px-[16px] max-sm:pt-[88px] px-[100px] flex justify-between items-center max-sm:flex-col max-sm:gap-[48px]">
@@ -64,7 +65,7 @@
                     </div>
                     <p class="text-[#909090] text-[18px] font-medium max-sm:text-center">Created to change everything for the better. For everyone</p>
                     <div>
-                        <button class="rounded-[6px] text-[#FFFFFF] text-[16px] font-medium border border-[#909090] px-[56px] py-[16px] cursor-pointer hover:bg-[#909090]">Shop Now</button>
+                        <button onclick="openCatalogue()" class="rounded-[6px] text-[#FFFFFF] text-[16px] font-medium border border-[#909090] px-[56px] py-[16px] cursor-pointer hover:bg-[#909090]">Shop Now</button>
                     </div>
                 </div>
                 <img class="w-[400px] h-[630px]" src="./media/Iphone Image.png" alt="iphone image">
@@ -75,27 +76,27 @@
         <div class="px-[16px] py-[64px] md:px-[100px] py-[80px] flex flex-col gap-[48px] md:gap-[32px] bg-[#FAFAFA] w-full">
             <h1 class="text-[24px] text-[#000000] font-medium">Browse By Category</h1>
             <div class="grid max-sm:grid-cols-2 gap-[20px] grid-cols-6">
-                <button class="w-[150px] max-sm:w-auto h-[128px] bg-[#EDEDED] px-[52px] py-[24px] rounded-[15px] cursor-pointer flex flex-col items-center gap-[8px] transition-transform duration-150 hover:scale-105">
+                <button onclick="phones()" class="w-[150px] max-sm:w-auto h-[128px] bg-[#EDEDED] px-[52px] py-[24px] rounded-[15px] cursor-pointer flex flex-col items-center gap-[8px] transition-transform duration-150 hover:scale-105">
                     <img class="w-[45px] h-[45px]" src="./media/Phones.png" alt="phone image">
                     <p class="font-medium text-[14px] text-[#000000]">Phones</p>
                 </button>
-                <button class="w-[150px] max-sm:w-auto h-[128px] bg-[#EDEDED] px-[52px] py-[24px] rounded-[15px] cursor-pointer flex flex-col items-center gap-[8px] transition-transform duration-150 hover:scale-105">
+                <button onclick="smartWatches()" class="w-[150px] max-sm:w-auto h-[128px] bg-[#EDEDED] px-[52px] py-[24px] rounded-[15px] cursor-pointer flex flex-col items-center gap-[8px] transition-transform duration-150 hover:scale-105">
                     <img class="w-[45px] h-[45px]" src="./media/Smart Watches.png" alt="">
                     <p class="font-medium text-[14px] text-[#000000] w-[117px]">Smart Watches</p>
                 </button>
-                <button class="w-[150px] max-sm:w-auto h-[128px] bg-[#EDEDED] px-[52px] py-[24px] rounded-[15px] cursor-pointer flex flex-col items-center gap-[8px] transition-transform duration-150 hover:scale-105">
+                <button onclick="cameras()" class="w-[150px] max-sm:w-auto h-[128px] bg-[#EDEDED] px-[52px] py-[24px] rounded-[15px] cursor-pointer flex flex-col items-center gap-[8px] transition-transform duration-150 hover:scale-105">
                     <img class="w-[45px] h-[45px]" src="./media/Cameras.png" alt="">
                     <p class="font-medium text-[14px] text-[#000000]">Cameras</p>
                 </button>
-                <button class="w-[150px] max-sm:w-auto h-[128px] bg-[#EDEDED] px-[52px] py-[24px] rounded-[15px] cursor-pointer flex flex-col items-center gap-[8px] transition-transform duration-150 hover:scale-105">
+                <button onclick="headphones()" class="w-[150px] max-sm:w-auto h-[128px] bg-[#EDEDED] px-[52px] py-[24px] rounded-[15px] cursor-pointer flex flex-col items-center gap-[8px] transition-transform duration-150 hover:scale-105">
                     <img class="w-[45px] h-[45px]" src="./media/Headphones.png" alt="">
                     <p class="font-medium text-[14px] text-[#000000]">Headphones</p>
                 </button>
-                <button class="w-[150px] max-sm:w-auto h-[128px] bg-[#EDEDED] px-[52px] py-[24px] rounded-[15px] cursor-pointer flex flex-col items-center gap-[8px] transition-transform duration-150 hover:scale-105">
+                <button onclick="computers()" class="w-[150px] max-sm:w-auto h-[128px] bg-[#EDEDED] px-[52px] py-[24px] rounded-[15px] cursor-pointer flex flex-col items-center gap-[8px] transition-transform duration-150 hover:scale-105">
                     <img class="w-[45px] h-[45px]" src="./media/Computers.png" alt="">
                     <p class="font-medium text-[14px] text-[#000000]">Computers</p>
                 </button>
-                <button class="w-[150px] max-sm:w-auto h-[128px] bg-[#EDEDED] px-[52px] py-[24px] rounded-[15px] cursor-pointer flex flex-col items-center gap-[8px] transition-transform duration-150 hover:scale-105">
+                <button onclick="gaming()" class="w-[150px] max-sm:w-auto h-[128px] bg-[#EDEDED] px-[52px] py-[24px] rounded-[15px] cursor-pointer flex flex-col items-center gap-[8px] transition-transform duration-150 hover:scale-105">
                     <img class="w-[45px] h-[45px]" src="./media/Gaming.png" alt="">
                     <p class="font-medium text-[14px] text-[#000000]">Gaming</p>
                 </button>
@@ -113,12 +114,12 @@
             <div class="grid grid-rows-2 gap-[16px]">
                 <div class="grid grid-cols-4 max-sm:grid-cols-2 items-center gap-[16px]">
                     <div class="h-[400px] md:h-[420px] bg-[#F6F6F6] px-[16px] py-[24px] flex flex-col items-center gap-[16px] rounded-[9px]">
-                        <img class="w-[104px] h-[104px] md:w-[160px] md:h-[160px]" src="./media/Iphone 14 pro.png" alt="iphone image">
+                        <img class="w-[104px] h-[104px] md:w-[160px] md:h-[160px]" src="./media/Iphone 14 pro purple.png" alt="iphone image">
                         <div class="flex flex-col text-center items-center gap-[24px]">
                             <p class="font-medium text-[16px] text-[#000000]">Apple Iphone 14 Pro Max 128GB <span class="md:hidden">...</span><span class="max-sm:hidden">Deep Purple</span></p>
                             <p class="font-semibold text-[24px] text-[#000000]">$900</p>
                             <div>
-                                <button onclick="addToCart('./media/Iphone 14 pro.png', 'Apple Iphone 14 Pro Max 128GB Deep Purple', 900)" class="px-[45px] py-[20px] md:px-[64px] md:py-[12px] rounded-[8px] bg-[#000000] font-medium text-[14px] text-[#FFFFFF] cursor-pointer transition-transform duration-200 hover:scale-105">Buy Now</button>
+                                <button onclick="addToCart('./media/Iphone 14 pro purple.png', 'Apple Iphone 14 Pro Max 128GB Deep Purple', 900)" class="px-[45px] py-[20px] md:px-[64px] md:py-[12px] rounded-[8px] bg-[#000000] font-medium text-[14px] text-[#FFFFFF] cursor-pointer transition-transform duration-200 hover:scale-105">Buy Now</button>
                             </div>
                         </div>
                     </div>
@@ -272,6 +273,257 @@
             <button class="w-full px-[50px] py-[15px] bg-black text-white rounded-[10px] cursor-pointer hover:bg-[#909090] font-semibold">
                 Checkout
             </button>
+        </div>
+    </div>
+
+    <!-- Catalogue -->
+    <div id="catalogue" class="hidden">
+        <div class="px-[100px] max-sm:px-[16px] py-[20px]">
+            <div class=" flex text-[#B5B5B5] text-[16px] font-medium">
+                <p onclick="closeCatalogue()" class="cursor-pointer hover:text-[#000000] hover:underline transition">Home</p>
+                <span class="mx-2">/</span>
+                <p class="text-[#000000] underline">Catalogue</p>
+            </div>
+        </div>
+
+        <div class="px-[100px] py-[40px] flex flex-col gap-[32px] max-sm:px-[16px] w-full grid grid-rows-2 gap-[16px]">
+            <div class="grid grid-cols-4 max-sm:grid-cols-2 items-center gap-[16px]">
+                <div class="h-[400px] md:h-[420px] bg-[#F6F6F6] px-[16px] py-[24px] flex flex-col items-center gap-[16px] rounded-[9px]">
+                    <img class="w-[104px] h-[104px] md:w-[160px] md:h-[160px]" src="./media/Iphone 14 pro purple.png" alt="iphone image">
+                    <div class="flex flex-col text-center items-center gap-[24px]">
+                        <p class="font-medium text-[16px] text-[#000000]">Apple Iphone 14 Pro Max 128GB <span class="md:hidden">...</span><span class="max-sm:hidden">Deep Purple</span></p>
+                        <p class="font-semibold text-[24px] text-[#000000]">$900</p>
+                        <div>
+                            <button onclick="addToCart('./media/Iphone 14 pro purple.png', 'Apple Iphone 14 Pro Max 128GB Deep Purple', 900)" class="px-[45px] py-[20px] md:px-[64px] md:py-[12px] rounded-[8px] bg-[#000000] font-medium text-[14px] text-[#FFFFFF] cursor-pointer transition-transform duration-200 hover:scale-105">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="h-[400px] md:h-[420px] bg-[#F6F6F6] px-[16px] py-[24px] flex flex-col items-center gap-[16px] rounded-[9px]">
+                    <img class="w-[104px] h-[104px] md:w-[160px] md:h-[160px]" src="./media/Blackmagic Pocket Cinema Camera.png" alt="camera image">
+                    <div class="flex flex-col text-center items-center gap-[24px]">
+                        <p class="font-medium text-[16px] text-[#000000]">Blackmagic Pocket Cinema Camera 6k</p>
+                        <p class="font-semibold text-[24px] text-[#000000]">$2535</p>
+                        <div>
+                            <button onclick="addToCart('./media/Blackmagic Pocket Cinema Camera.png', 'Blackmagic Pocket Cinema Camera 6k', 2535)" class="px-[45px] py-[20px] md:px-[64px] md:py-[12px] rounded-[8px] bg-[#000000] font-medium text-[14px] text-[#FFFFFF] cursor-pointer transition-transform duration-200 hover:scale-105">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="h-[400px] md:h-[420px] bg-[#F6F6F6] px-[16px] py-[24px] flex flex-col items-center gap-[16px] rounded-[9px]">
+                    <img class="w-[104px] h-[104px] md:w-[160px] md:h-[160px]" src="./media/Apple Watch Series.png" alt="smart watch image">
+                    <div class="flex flex-col text-center items-center gap-[24px]">
+                        <p class="font-medium text-[16px] text-[#000000]">Apple Watch Series 9 GPS 41mm <span class="md:hidden">...</span><span class="max-sm:hidden">Starlight Aluminium</span></p>
+                        <p class="font-semibold text-[24px] text-[#000000]">$399</p>
+                        <div>
+                            <button onclick="addToCart('./media/Apple Watch Series.png', 'Apple Watch Series 9 GPS 41mm Starlight Aluminium', 399)" class="px-[45px] py-[20px] md:px-[64px] md:py-[12px] rounded-[8px] bg-[#000000] font-medium text-[14px] text-[#FFFFFF] cursor-pointer transition-transform duration-200 hover:scale-105">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="h-[400px] md:h-[420px] bg-[#F6F6F6] px-[16px] py-[24px] flex flex-col items-center gap-[16px] rounded-[9px]">
+                    <img class="w-[104px] h-[104px] md:w-[160px] md:h-[160px]" src="./media/AirPods Max Silver.png" alt="airpod image">
+                    <div class="flex flex-col text-center items-center gap-[24px]">
+                        <p class="font-medium text-[16px] text-[#000000]">AirPods Max Silver Starlight Aluminium</p>
+                        <p class="font-semibold text-[24px] text-[#000000]">$399</p>
+                        <div>
+                            <button onclick="addToCart('./media/AirPods Max Silver.png', 'AirPods Max Silver Starlight Aluminium', 399)" class="px-[45px] py-[20px] md:px-[64px] md:py-[12px] rounded-[8px] bg-[#000000] font-medium text-[14px] text-[#FFFFFF] cursor-pointer transition-transform duration-200 hover:scale-105">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-4 max-sm:grid-cols-2 items-center gap-[16px]">
+                <div class="h-[400px] md:h-[420px] bg-[#F6F6F6] px-[16px] py-[24px] flex flex-col items-center gap-[16px] rounded-[9px]">
+                    <img class="w-[104px] h-[104px] md:w-[160px] md:h-[160px]" src="./media/Samsung Galaxy Watch.png" alt="Samsung Galaxy Watch">
+                    <div class="flex flex-col text-center items-center gap-[24px]">
+                        <p class="font-medium text-[16px] text-[#000000]">Samsung Galaxy Watch6 Classic <span class="md:hidden">...</span><span class="max-sm:hidden">47mm Black</span></p>
+                        <p class="font-semibold text-[24px] text-[#000000]">$369</p>
+                        <div>
+                            <button onclick="addToCart('./media/Samsung Galaxy Watch.png', 'Samsung Galaxy Watch6 Classic 47mm Black', 369)" class="px-[45px] py-[20px] md:px-[64px] md:py-[12px] rounded-[8px] bg-[#000000] font-medium text-[14px] text-[#FFFFFF] cursor-pointer transition-transform duration-200 hover:scale-105">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="h-[400px] md:h-[420px] bg-[#F6F6F6] px-[16px] py-[24px] flex flex-col items-center gap-[16px] rounded-[9px]">
+                    <img class="w-[104px] h-[104px] md:w-[160px] md:h-[160px]" src="./media/Galaxy Z Fold.png" alt="Galaxy Z Fold5 image">
+                    <div class="flex flex-col text-center items-center gap-[24px]">
+                        <p class="font-medium text-[16px] text-[#000000]">Galaxy Z Fold5 Unlocked  <span class="md:hidden">...</span><span class="max-sm:hidden">| 256GB | Phantom Black</span></p>
+                        <p class="font-semibold text-[24px] text-[#000000]">$1799</p>
+                        <div>
+                            <button onclick="addToCart('./media/Galaxy Z Fold.png', 'Galaxy Z Fold5 Unlocked | 256GB | Phantom Black', 1799)" class="px-[45px] py-[20px] md:px-[64px] md:py-[12px] rounded-[8px] bg-[#000000] font-medium text-[14px] text-[#FFFFFF] cursor-pointer transition-transform duration-200 hover:scale-105">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="h-[400px] md:h-[420px] bg-[#F6F6F6] px-[16px] py-[24px] flex flex-col items-center gap-[16px] rounded-[9px]">
+                    <img class="w-[104px] h-[104px] md:w-[160px] md:h-[160px]" src="./media/Galaxy Buds.png" alt="Galaxy Bud image">
+                    <div class="flex flex-col text-center items-center gap-[24px]">
+                        <p class="font-medium text-[16px] text-[#000000]">Galaxy Buds FE <br>Graphite</p>
+                        <p class="font-semibold text-[24px] text-[#000000]">$99.99</p>
+                        <div>
+                            <button onclick="addToCart('./media/Galaxy Buds.png', 'Galaxy Buds FE Graphite', 99.99)" class="px-[45px] py-[20px] md:px-[64px] md:py-[12px] rounded-[8px] bg-[#000000] font-medium text-[14px] text-[#FFFFFF] cursor-pointer transition-transform duration-200 hover:scale-105">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="h-[400px] md:h-[420px] bg-[#F6F6F6] px-[16px] py-[24px] flex flex-col items-center gap-[16px] rounded-[9px]">
+                    <img class="w-[104px] h-[104px] md:w-[160px] md:h-[160px]" src="./media/Apple iPad 9.png" alt="Apple iPad image">
+                    <div class="flex flex-col text-center items-center gap-[24px]">
+                        <p class="font-medium text-[16px] text-[#000000]">Apple iPad 9 10.2" 64GB Wi-Fi Silver<span class="md:hidden">...</span><span class="max-sm:hidden"> (MK2L3) 2021</span></p>
+                        <p class="font-semibold text-[24px] text-[#000000]">$398</p>
+                        <div>
+                            <button onclick="addToCart('./media/Apple iPad 9.png', 'Apple iPad 9 10.2 64GB Wi-Fi Silver (MK2L3) 2021', 398)" class="px-[45px] py-[20px] md:px-[64px] md:py-[12px] rounded-[8px] bg-[#000000] font-medium text-[14px] text-[#FFFFFF] cursor-pointer transition-transform duration-200 hover:scale-105">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- phones -->
+    <div id="phones" class="hidden">
+        <div class="px-[100px] max-sm:px-[16px] py-[20px]">
+            <div class=" flex text-[#B5B5B5] text-[16px] font-medium">
+                <p onclick="closePhones()" class="cursor-pointer hover:text-[#000000] hover:underline transition">Home</p>
+                <span class="mx-2">/</span>
+                <p class="text-[#000000] underline">Phones</p>
+            </div>
+        </div>
+
+        <div class="px-[100px] py-[40px] flex flex-col gap-[32px] max-sm:px-[16px] w-full grid grid-rows-2 gap-[16px]">
+            <div class="grid grid-cols-4 max-sm:grid-cols-2 items-center gap-[16px]">
+                <div class="h-[400px] md:h-[420px] bg-[#F6F6F6] px-[16px] py-[24px] flex flex-col items-center gap-[16px] rounded-[9px]">
+                    <img class="w-[104px] h-[104px] md:w-[160px] md:h-[160px]" src="./media/Iphone 14 pro purple.png" alt="iphone image">
+                    <div class="flex flex-col text-center items-center gap-[24px]">
+                        <p class="font-medium text-[16px] text-[#000000]">Apple Iphone 14 Pro Max  <span class="md:hidden">...</span><span class="max-sm:hidden">128GB Deep Purple</span></p>
+                        <p class="font-semibold text-[24px] text-[#000000]">$900</p>
+                        <div>
+                            <button onclick="addToCart('./media/Iphone 14 pro purple.png', 'Apple Iphone 14 Pro Max 128GB Deep Purple', 900)" class="px-[45px] py-[20px] md:px-[64px] md:py-[12px] rounded-[8px] bg-[#000000] font-medium text-[14px] text-[#FFFFFF] cursor-pointer transition-transform duration-200 hover:scale-105">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="h-[400px] md:h-[420px] bg-[#F6F6F6] px-[16px] py-[24px] flex flex-col items-center gap-[16px] rounded-[9px]">
+                    <img class="w-[104px] h-[104px] md:w-[160px] md:h-[160px]" src="./media/Iphone 14 pro gold.png" alt="iphone image">
+                    <div class="flex flex-col text-center items-center gap-[24px]">
+                        <p class="font-medium text-[16px] text-[#000000]">Apple Iphone 14 Pro 512GB Gold</p>
+                        <p class="font-semibold text-[24px] text-[#000000]">$1437</p>
+                        <div>
+                            <button onclick="addToCart('./media/Iphone 14 pro gold.png', 'Apple Iphone 14 Pro 512GB Gold', 1437)" class="px-[45px] py-[20px] md:px-[64px] md:py-[12px] rounded-[8px] bg-[#000000] font-medium text-[14px] text-[#FFFFFF] cursor-pointer transition-transform duration-200 hover:scale-105">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="h-[400px] md:h-[420px] bg-[#F6F6F6] px-[16px] py-[24px] flex flex-col items-center gap-[16px] rounded-[9px]">
+                    <img class="w-[104px] h-[104px] md:w-[160px] md:h-[160px]" src="./media/Iphone 11 white.png" alt="iphone image">
+                    <div class="flex flex-col text-center items-center gap-[24px]">
+                        <p class="font-medium text-[16px] text-[#000000]">Apple Iphone 11 128GB <br>White</p>
+                        <p class="font-semibold text-[24px] text-[#000000]">$510</p>
+                        <div>
+                            <button onclick="addToCart('./media/Iphone 11 white.png', 'Apple Iphone 11 128GB White', 510)" class="px-[45px] py-[20px] md:px-[64px] md:py-[12px] rounded-[8px] bg-[#000000] font-medium text-[14px] text-[#FFFFFF] cursor-pointer transition-transform duration-200 hover:scale-105">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="h-[400px] md:h-[420px] bg-[#F6F6F6] px-[16px] py-[24px] flex flex-col items-center gap-[16px] rounded-[9px]">
+                    <img class="w-[104px] h-[104px] md:w-[160px] md:h-[160px]" src="./media/Iphone 13 pink.png" alt="iphone image">
+                    <div class="flex flex-col text-center items-center gap-[24px]">
+                        <p class="font-medium text-[16px] text-[#000000]">Apple Iphone 13 mini 128GB pink</p>
+                        <p class="font-semibold text-[24px] text-[#000000]">$850</p>
+                        <div>
+                            <button onclick="addToCart('./media/Iphone 13 pink.png', 'Apple Iphone 13 mini 128GB pink', 850)" class="px-[45px] py-[20px] md:px-[64px] md:py-[12px] rounded-[8px] bg-[#000000] font-medium text-[14px] text-[#FFFFFF] cursor-pointer transition-transform duration-200 hover:scale-105">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-4 max-sm:grid-cols-2 items-center gap-[16px]">
+                <div class="h-[400px] md:h-[420px] bg-[#F6F6F6] px-[16px] py-[24px] flex flex-col items-center gap-[16px] rounded-[9px]">
+                    <img class="w-[104px] h-[104px] md:w-[160px] md:h-[160px]" src="./media/Iphone 14 pro black.png" alt="iphone image">
+                    <div class="flex flex-col text-center items-center gap-[24px]">
+                        <p class="font-medium text-[16px] text-[#000000]">Apple iPhone 14 Pro 256GB Space Black</p>
+                        <p class="font-semibold text-[24px] text-[#000000]">$1399</p>
+                        <div>
+                            <button onclick="addToCart('./media/Iphone 14 pro black.png', 'Apple iPhone 14 Pro 256GB Space Black', 1399)" class="px-[45px] py-[20px] md:px-[64px] md:py-[12px] rounded-[8px] bg-[#000000] font-medium text-[14px] text-[#FFFFFF] cursor-pointer transition-transform duration-200 hover:scale-105">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="h-[400px] md:h-[420px] bg-[#F6F6F6] px-[16px] py-[24px] flex flex-col items-center gap-[16px] rounded-[9px]">
+                    <img class="w-[104px] h-[104px] md:w-[160px] md:h-[160px]" src="./media/Galaxy Z Fold.png" alt="Galaxy Z Fold5 image">
+                    <div class="flex flex-col text-center items-center gap-[24px]">
+                        <p class="font-medium text-[16px] text-[#000000]">Galaxy Z Fold5 Unlocked  | 256GB | Phantom Black</p>
+                        <p class="font-semibold text-[24px] text-[#000000]">$1799</p>
+                        <div>
+                            <button onclick="addToCart('./media/Galaxy Z Fold.png', 'Galaxy Z Fold5 Unlocked | 256GB | Phantom Black', 1799)" class="px-[45px] py-[20px] md:px-[64px] md:py-[12px] rounded-[8px] bg-[#000000] font-medium text-[14px] text-[#FFFFFF] cursor-pointer transition-transform duration-200 hover:scale-105">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="h-[400px] md:h-[420px] bg-[#F6F6F6] px-[16px] py-[24px] flex flex-col items-center gap-[16px] rounded-[9px]">
+                    <img class="w-[104px] h-[104px] md:w-[160px] md:h-[160px]" src="./media/Iphone 14 pro silver.png" alt="iphone image">
+                    <div class="flex flex-col text-center items-center gap-[24px]">
+                        <p class="font-medium text-[16px] text-[#000000]">Apple Iphone 14 pro 128GB silver</p>
+                        <p class="font-semibold text-[24px] text-[#000000]">$1399</p>
+                        <div>
+                            <button onclick="addToCart('./media/Iphone 14 pro silver.png', 'Apple Iphone 14 pro 128GB silver', 1399)" class="px-[45px] py-[20px] md:px-[64px] md:py-[12px] rounded-[8px] bg-[#000000] font-medium text-[14px] text-[#FFFFFF] cursor-pointer transition-transform duration-200 hover:scale-105">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="h-[400px] md:h-[420px] bg-[#F6F6F6] px-[16px] py-[24px] flex flex-col items-center gap-[16px] rounded-[9px]">
+                    <img class="w-[104px] h-[104px] md:w-[160px] md:h-[160px]" src="./media/Apple iPad 9.png" alt="Apple iPad image">
+                    <div class="flex flex-col text-center items-center gap-[24px]">
+                        <p class="font-medium text-[16px] text-[#000000]">Apple iPad 9 10.2" 64GB Wi-Fi Silver (MK2L3) 2021</p>
+                        <p class="font-semibold text-[24px] text-[#000000]">$398</p>
+                        <div>
+                            <button onclick="addToCart('./media/Apple iPad 9.png', 'Apple iPad 9 10.2 64GB Wi-Fi Silver (MK2L3) 2021', 398)" class="px-[45px] py-[20px] md:px-[64px] md:py-[12px] rounded-[8px] bg-[#000000] font-medium text-[14px] text-[#FFFFFF] cursor-pointer transition-transform duration-200 hover:scale-105">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Smart watches -->
+    <div id="smartWatches" class="hidden">
+        <div class="px-[100px] max-sm:px-[16px] py-[20px]">
+            <div class=" flex text-[#B5B5B5] text-[16px] font-medium">
+                <p onclick="closeSmartWatches()" class="cursor-pointer hover:text-[#000000] hover:underline transition">Home</p>
+                <span class="mx-2">/</span>
+                <p class="text-[#000000] underline">Smart watches</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cameras -->
+    <div id="cameras" class="hidden">
+        <div class="px-[100px] max-sm:px-[16px] py-[20px]">
+            <div class=" flex text-[#B5B5B5] text-[16px] font-medium">
+                <p onclick="closeCameras()" class="cursor-pointer hover:text-[#000000] hover:underline transition">Home</p>
+                <span class="mx-2">/</span>
+                <p class="text-[#000000] underline">Cameras</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Headphones -->
+    <div id="headphones" class="hidden">
+        <div class="px-[100px] max-sm:px-[16px] py-[20px]">
+            <div class=" flex text-[#B5B5B5] text-[16px] font-medium">
+                <p onclick="closeHeadphones()" class="cursor-pointer hover:text-[#000000] hover:underline transition">Home</p>
+                <span class="mx-2">/</span>
+                <p class="text-[#000000] underline">Headphones</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Computers -->
+    <div id="computers" class="hidden">
+        <div class="px-[100px] max-sm:px-[16px] py-[20px]">
+            <div class=" flex text-[#B5B5B5] text-[16px] font-medium">
+                <p onclick="closeComputers()" class="cursor-pointer hover:text-[#000000] hover:underline transition">Home</p>
+                <span class="mx-2">/</span>
+                <p class="text-[#000000] underline">Computers</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Gaming -->
+    <div id="gaming" class="hidden">
+        <div class="px-[100px] max-sm:px-[16px] py-[20px]">
+            <div class=" flex text-[#B5B5B5] text-[16px] font-medium">
+                <p onclick="closeGaming()" class="cursor-pointer hover:text-[#000000] hover:underline transition">Home</p>
+                <span class="mx-2">/</span>
+                <p class="text-[#000000] underline">Gaming</p>
+            </div>
         </div>
     </div>
 
