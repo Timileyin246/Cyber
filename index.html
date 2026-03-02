@@ -21,8 +21,8 @@
         </div>
         <ul class="flex items-center gap-[30px] max-sm:hidden">
             <a href="#"><li class="text-[16px] font-medium text-[#B5B5B5] hover:text-[#000000]">Home</li></a>
-            <a href="#"><li class="text-[16px] font-medium text-[#B5B5B5] hover:text-[#000000]">About</li></a>
-            <a href="#"><li class="text-[16px] font-medium text-[#B5B5B5] hover:text-[#000000]">Contact Us</li></a>
+            <a href="#about"><li class="text-[16px] font-medium text-[#B5B5B5] hover:text-[#000000]">About</li></a>
+            <a href="#contactUs"><li class="text-[16px] font-medium text-[#B5B5B5] hover:text-[#000000]">Contact Us</li></a>
             <a href="#"><li class="text-[16px] font-medium text-[#B5B5B5] hover:text-[#000000]">Blog</li></a>
         </ul>
         <div class="flex items-center gap-[24px]">
@@ -44,8 +44,8 @@
             </div>
             <ul class="flex flex-col gap-[16px] w-full">
                 <a href="#"><li class="text-[16px] font-medium text-[#B5B5B5] hover:text-[#000000]">Home</li></a>
-                <a href="#"><li class="text-[16px] font-medium text-[#B5B5B5] hover:text-[#000000]">About</li></a>
-                <a href="#"><li class="text-[16px] font-medium text-[#B5B5B5] hover:text-[#000000]">Contact Us</li></a>
+                <a href="#about"><li class="text-[16px] font-medium text-[#B5B5B5] hover:text-[#000000]">About</li></a>
+                <a href="#contactUs"><li class="text-[16px] font-medium text-[#B5B5B5] hover:text-[#000000]">Contact Us</li></a>
                 <a href="#"><li class="text-[16px] font-medium text-[#B5B5B5] hover:text-[#000000]">Blog</li></a>
             </ul>
 
@@ -207,7 +207,7 @@
                     <p class="font-regular max-sm:text-center text-[16px] text-[#787878]">Commodo fames vitae vitae leo mauris in. Eu consequat.</p>
                 </div>
                 <div>
-                    <button class="px-[56px] py-[16px] rounded-[6px] text-[#FFFFFF] border border-[#FFFFFF] cursor-pointer hover:bg-[#787878]">Shop Now</button>
+                    <button onclick="openCatalogue()" class="px-[56px] py-[16px] rounded-[6px] text-[#FFFFFF] border border-[#FFFFFF] cursor-pointer hover:bg-[#787878]">Shop Now</button>
                 </div>
             </div>
         </div>
@@ -215,8 +215,8 @@
         <!-- Footer -->
         <div class="bg-black px-[32px] md:px-[100px] py-[48px] md:py-[104px] flex flex-col gap-[32px] md:gap-[24px] max-sm:items-center">
             <div class="flex flex-col md:flex-row gap-[32px] md:gap-[113px]">
-                <div class="flex flex-col gap-[24px] w-[384px] max-sm:items-center">
-                    <img class="w-[96px] h-[32px]" src="./media/logo 2.png" alt="">
+                <div id="about" class="flex flex-col gap-[24px] w-[384px] max-sm:items-center">
+                    <img class="w-[96px] h-[32px]" src="./media/logo 2.png" alt="logo">
                     <p class="font-medium text-[14px] text-[#CFCFCF] text-center md:text-left">We are a residential interior design firm located in Potland. Our boutique-studio offers more than</p>
                 </div>
                 <div class="flex flex-col md:flex-row gap-[32px]">
@@ -244,7 +244,7 @@
                     </div>
                 </div>
             </div>
-            <div class="flex items-center gap-[30px]">
+            <div id="contactUs" class="flex items-center gap-[30px]">
                 <a href="#"><i class="fa-brands fa-twitter fa-xl text-[#FFFFFF]"></i></a>
                 <a href="#"><i class="fa-brands fa-facebook-f fa-xl text-[#FFFFFF]"></i></a>
                 <a href="#"><i class="fa-brands fa-tiktok fa-xl text-[#FFFFFF]"></i></a>
@@ -501,7 +501,7 @@
                 <div class="h-[400px] md:h-[420px] bg-[#F6F6F6] px-[16px] py-[24px] flex flex-col items-center gap-[16px] rounded-[9px]">
                     <img class="w-[104px] h-[104px] md:w-[160px] md:h-[160px]" src="./media/oraimo freepods.png" alt="earpod image">
                     <div class="flex flex-col text-center items-center gap-[24px]">
-                        <p class="font-medium text-[16px] text-[#000000]">ORAIMO FREEPODS Wireless <span class="md:hidden">...</span><span class="max-sm:hidden">Stereo Earpods</span></p>
+                        <p class="font-medium text-[16px] text-[#000000]">ORAIMO FREEPODS <span class="md:hidden">...</span><span class="max-sm:hidden">Wireless Stereo Earpods</span></p>
                         <p class="font-semibold text-[24px] text-[#000000]">$200</p>
                         <div>
                             <button onclick="addToCart('./media/oraimo freepods.png', 'ORAIMO FREEPODS Wireless Stereo Earpods', 200)" class="px-[45px] py-[20px] md:px-[64px] md:py-[12px] rounded-[8px] bg-[#000000] font-medium text-[14px] text-[#FFFFFF] cursor-pointer transition-transform duration-200 hover:scale-105">Buy Now</button>
@@ -535,6 +535,102 @@
                         <p class="font-semibold text-[24px] text-[#000000]">$3000</p>
                         <div>
                             <button onclick="addToCart('./media/panasonic camera.png', 'Panasonic AG-UX90 4K/HD Professional Camcorder', 3000)" class="px-[45px] py-[20px] md:px-[64px] md:py-[12px] rounded-[8px] bg-[#000000] font-medium text-[14px] text-[#FFFFFF] cursor-pointer transition-transform duration-200 hover:scale-105">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-4 max-sm:grid-cols-2 items-center gap-[16px]">
+                <div class="h-[400px] md:h-[420px] bg-[#F6F6F6] px-[16px] py-[24px] flex flex-col items-center gap-[16px] rounded-[9px]">
+                    <img class="w-[104px] h-[104px] md:w-[160px] md:h-[160px]" src="./media/PS4 Controller.png" alt="camera image">
+                    <div class="flex flex-col text-center items-center gap-[24px]">
+                        <p class="font-medium text-[16px] text-[#000000]">PS4 Controller - Dualshock 4 Wireless PS4 <span class="md:hidden">...</span><span class="max-sm:hidden">Pad - White</span></p>
+                        <p class="font-semibold text-[24px] text-[#000000]">$200</p>
+                        <div>
+                            <button onclick="addToCart('./media/PS4 Controller.png', 'PS4 Controller - Dualshock 4 Wireless PS4 Pad - White', 200)" class="px-[45px] py-[20px] md:px-[64px] md:py-[12px] rounded-[8px] bg-[#000000] font-medium text-[14px] text-[#FFFFFF] cursor-pointer transition-transform duration-200 hover:scale-105">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="h-[400px] md:h-[420px] bg-[#F6F6F6] px-[16px] py-[24px] flex flex-col items-center gap-[16px] rounded-[9px]">
+                    <img class="w-[104px] h-[104px] md:w-[160px] md:h-[160px]" src="./media/Play Station 5.png" alt="camera image">
+                    <div class="flex flex-col text-center items-center gap-[24px]">
+                        <p class="font-medium text-[16px] text-[#000000]">Sony Computer Play Station 5 Slim Console</p>
+                        <p class="font-semibold text-[24px] text-[#000000]">$1000</p>
+                        <div>
+                            <button onclick="addToCart('./media/Play Station 5.png', 'Sony Computer Play Station 5 Slim Console', 1000)" class="px-[45px] py-[20px] md:px-[64px] md:py-[12px] rounded-[8px] bg-[#000000] font-medium text-[14px] text-[#FFFFFF] cursor-pointer transition-transform duration-200 hover:scale-105">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="h-[400px] md:h-[420px] bg-[#F6F6F6] px-[16px] py-[24px] flex flex-col items-center gap-[16px] rounded-[9px]">
+                    <img class="w-[104px] h-[104px] md:w-[160px] md:h-[160px]" src="./media/Dobe PS5 Controller.png" alt="camera image">
+                    <div class="flex flex-col text-center items-center gap-[24px]">
+                        <p class="font-medium text-[16px] text-[#000000]">Dobe PS5 Controller Pad Dual Charging Dock<span class="md:hidden">...</span><span class="max-sm:hidden">/ Station</span></p>
+                        <p class="font-semibold text-[24px] text-[#000000]">$500</p>
+                        <div>
+                            <button onclick="addToCart('./media/Dobe PS5 Controller.png', 'Dobe PS5 Controller Pad Dual Charging Dock/ Station', 500)" class="px-[45px] py-[20px] md:px-[64px] md:py-[12px] rounded-[8px] bg-[#000000] font-medium text-[14px] text-[#FFFFFF] cursor-pointer transition-transform duration-200 hover:scale-105">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="h-[400px] md:h-[420px] bg-[#F6F6F6] px-[16px] py-[24px] flex flex-col items-center gap-[16px] rounded-[9px]">
+                    <img class="w-[104px] h-[104px] md:w-[160px] md:h-[160px]" src="./media/3D VR Headset.png" alt="camera image">
+                    <div class="flex flex-col text-center items-center gap-[24px]">
+                        <p class="font-medium text-[16px] text-[#000000]">3D VR Headset/Virtual Reality For All <span class="md:hidden">...</span><span class="max-sm:hidden">Phone</span></p>
+                        <p class="font-semibold text-[24px] text-[#000000]">$400</p>
+                        <div>
+                            <button onclick="addToCart('./media/3D VR Headset.png', '3D VR Headset/Virtual Reality For All Phone', 400)" class="px-[45px] py-[20px] md:px-[64px] md:py-[12px] rounded-[8px] bg-[#000000] font-medium text-[14px] text-[#FFFFFF] cursor-pointer transition-transform duration-200 hover:scale-105">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-4 max-sm:grid-cols-2 items-center gap-[16px]">
+                <div class="h-[400px] md:h-[420px] bg-[#F6F6F6] px-[16px] py-[24px] flex flex-col items-center gap-[16px] rounded-[9px]">
+                    <img class="w-[104px] h-[104px] md:w-[160px] md:h-[160px]" src="./media/Apple MacBook Pro.png" alt="laptop image">
+                    <div class="flex flex-col text-center items-center gap-[24px]">
+                        <p class="font-medium text-[16px] text-[#000000]">Apple MacBook Pro 16" - M3 Max Chip - 30-core GPU <span class="md:hidden">...</span><span class="max-sm:hidden">- 36GB Memory/1TB SSD</span></p>
+                        <p class="font-semibold text-[24px] text-[#000000]">$1500</p>
+                        <div>
+                            <button onclick="addToCart('./media/Apple MacBook Pro.png', 'Apple MacBook Pro 16 - M3 Max Chip - 30-core GPU - 36GB Memory/1TB SSD', 1500)" class="px-[45px] py-[20px] md:px-[64px] md:py-[12px] rounded-[8px] bg-[#000000] font-medium text-[14px] text-[#FFFFFF] cursor-pointer transition-transform duration-200 hover:scale-105">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="h-[400px] md:h-[420px] bg-[#F6F6F6] px-[16px] py-[24px] flex flex-col items-center gap-[16px] rounded-[9px]">
+                    <img class="w-[104px] h-[104px] md:w-[160px] md:h-[160px]" src="./media/DELL Latitude 7490.png" alt="laptop image">
+                    <div class="flex flex-col text-center items-center gap-[24px]">
+                        <p class="font-medium text-[16px] text-[#000000]">DELL Latitude 7490 Intel Core I7/ 32GB RAM 512GB <span class="md:hidden">...</span><span class="max-sm:hidden">SSD/WIN 11PRO</span></p>
+                        <p class="font-semibold text-[24px] text-[#000000]">$900</p>
+                        <div>
+                            <button onclick="addToCart('./media/DELL Latitude 7490.png', 'DELL Latitude 7490 Intel Core I7/ 32GB RAM 512GB SSD/WIN 11PRO', 900)" class="px-[45px] py-[20px] md:px-[64px] md:py-[12px] rounded-[8px] bg-[#000000] font-medium text-[14px] text-[#FFFFFF] cursor-pointer transition-transform duration-200 hover:scale-105">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="h-[400px] md:h-[420px] bg-[#F6F6F6] px-[16px] py-[24px] flex flex-col items-center gap-[16px] rounded-[9px]">
+                    <img class="w-[104px] h-[104px] md:w-[160px] md:h-[160px]" src="./media/Hp EliteBook 840 G5.png" alt="laptop image">
+                    <div class="flex flex-col text-center items-center gap-[24px]">
+                        <p class="font-medium text-[16px] text-[#000000]">Hp EliteBook 840 G5 Intel Core I5-16GB RAM/1TB <span class="md:hidden">...</span><span class="max-sm:hidden">SSD/Win11</span></p>
+                        <p class="font-semibold text-[24px] text-[#000000]">$500</p>
+                        <div>
+                            <button onclick="addToCart('./media/Hp EliteBook 840 G5.png', 'Hp EliteBook 840 G5 Intel Core I5-16GB RAM/1TB SSD/Win11', 500)" class="px-[45px] py-[20px] md:px-[64px] md:py-[12px] rounded-[8px] bg-[#000000] font-medium text-[14px] text-[#FFFFFF] cursor-pointer transition-transform duration-200 hover:scale-105">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="h-[400px] md:h-[420px] bg-[#F6F6F6] px-[16px] py-[24px] flex flex-col items-center gap-[16px] rounded-[9px]">
+                    <img class="w-[104px] h-[104px] md:w-[160px] md:h-[160px]" src="./media/Hp ELITEBOOK X360 830 G8.png" alt="laptop image">
+                    <div class="flex flex-col text-center items-center gap-[24px]">
+                        <p class="font-medium text-[16px] text-[#000000]">Hp ELITEBOOK X360 830 G8 CORE I5 16GB <span class="md:hidden">...</span><span class="max-sm:hidden">RAM/512GB SSD - WIN 11</span></p>
+                        <p class="font-semibold text-[24px] text-[#000000]">$700</p>
+                        <div>
+                            <button onclick="addToCart('./media/Hp ELITEBOOK X360 830 G8.png', 'Hp ELITEBOOK X360 830 G8 CORE I5 16GB RAM/512GB SSD - WIN 11', 700)" class="px-[45px] py-[20px] md:px-[64px] md:py-[12px] rounded-[8px] bg-[#000000] font-medium text-[14px] text-[#FFFFFF] cursor-pointer transition-transform duration-200 hover:scale-105">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-4 max-sm:grid-cols-2 items-center gap-[16px]">
+                <div class="h-[400px] md:h-[420px] bg-[#F6F6F6] px-[16px] py-[24px] flex flex-col items-center gap-[16px] rounded-[9px]">
+                    <img class="w-[104px] h-[104px] md:w-[160px] md:h-[160px]" src="./media/Hp EliteBook X360 830 G11.png" alt="laptop image">
+                    <div class="flex flex-col text-center items-center gap-[24px]">
+                        <p class="font-medium text-[16px] text-[#000000]">Hp EliteBook X360 830 G11 13.3, Intel Core I7-155U <span class="md:hidden">...</span><span class="max-sm:hidden">16GBRAM, 512GB SSD, Win 11</span></p>
+                        <p class="font-semibold text-[24px] text-[#000000]">$900</p>
+                        <div>
+                            <button onclick="addToCart('./media/Hp EliteBook X360 830 G11.png', 'Hp EliteBook X360 830 G11 13.3, Intel Core I7-155U 16GB RAM, 512GB SSD, Win 11', 900)" class="px-[45px] py-[20px] md:px-[64px] md:py-[12px] rounded-[8px] bg-[#000000] font-medium text-[14px] text-[#FFFFFF] cursor-pointer transition-transform duration-200 hover:scale-105">Buy Now</button>
                         </div>
                     </div>
                 </div>
@@ -950,42 +1046,42 @@
         <div class="px-[100px] py-[40px] flex flex-col gap-[32px] max-sm:px-[16px] w-full grid grid-rows-2 gap-[16px]">
             <div class="grid grid-cols-4 max-sm:grid-cols-2 items-center gap-[16px]">
                 <div class="h-[400px] md:h-[420px] bg-[#F6F6F6] px-[16px] py-[24px] flex flex-col items-center gap-[16px] rounded-[9px]">
-                    <img class="w-[104px] h-[104px] md:w-[160px] md:h-[160px]" src="./media/Blackmagic Pocket Cinema Camera.png" alt="camera image">
+                    <img class="w-[104px] h-[104px] md:w-[160px] md:h-[160px]" src="./media/Apple MacBook Pro.png" alt="laptop image">
                     <div class="flex flex-col text-center items-center gap-[24px]">
-                        <p class="font-medium text-[16px] text-[#000000]">Blackmagic Pocket Cinema Camera 6k</p>
-                        <p class="font-semibold text-[24px] text-[#000000]">$2535</p>
+                        <p class="font-medium text-[16px] text-[#000000]">Apple MacBook Pro 16" - M3 Max Chip - 30-core GPU <span class="md:hidden">...</span><span class="max-sm:hidden">- 36GB Memory/1TB SSD</span></p>
+                        <p class="font-semibold text-[24px] text-[#000000]">$1500</p>
                         <div>
-                            <button onclick="addToCart('./media/Blackmagic Pocket Cinema Camera.png', 'Blackmagic Pocket Cinema Camera 6k', 2535)" class="px-[45px] py-[20px] md:px-[64px] md:py-[12px] rounded-[8px] bg-[#000000] font-medium text-[14px] text-[#FFFFFF] cursor-pointer transition-transform duration-200 hover:scale-105">Buy Now</button>
+                            <button onclick="addToCart('./media/Apple MacBook Pro.png', 'Apple MacBook Pro 16 - M3 Max Chip - 30-core GPU - 36GB Memory/1TB SSD', 1500)" class="px-[45px] py-[20px] md:px-[64px] md:py-[12px] rounded-[8px] bg-[#000000] font-medium text-[14px] text-[#FFFFFF] cursor-pointer transition-transform duration-200 hover:scale-105">Buy Now</button>
                         </div>
                     </div>
                 </div>
-                <div>
-                    <img src="" alt="">
-                    <div>
-                        <p></p>
-                        <p></p>
+                <div class="h-[400px] md:h-[420px] bg-[#F6F6F6] px-[16px] py-[24px] flex flex-col items-center gap-[16px] rounded-[9px]">
+                    <img class="w-[104px] h-[104px] md:w-[160px] md:h-[160px]" src="./media/DELL Latitude 7490.png" alt="laptop image">
+                    <div class="flex flex-col text-center items-center gap-[24px]">
+                        <p class="font-medium text-[16px] text-[#000000]">DELL Latitude 7490 Intel Core I7/ 32GB RAM 512GB <span class="md:hidden">...</span><span class="max-sm:hidden">SSD/WIN 11PRO</span></p>
+                        <p class="font-semibold text-[24px] text-[#000000]">$900</p>
                         <div>
-                            <button></button>
+                            <button onclick="addToCart('./media/DELL Latitude 7490.png', 'DELL Latitude 7490 Intel Core I7/ 32GB RAM 512GB SSD/WIN 11PRO', 900)" class="px-[45px] py-[20px] md:px-[64px] md:py-[12px] rounded-[8px] bg-[#000000] font-medium text-[14px] text-[#FFFFFF] cursor-pointer transition-transform duration-200 hover:scale-105">Buy Now</button>
                         </div>
                     </div>
                 </div>
-                <div>
-                    <img src="" alt="">
-                    <div>
-                        <p></p>
-                        <p></p>
+                <div class="h-[400px] md:h-[420px] bg-[#F6F6F6] px-[16px] py-[24px] flex flex-col items-center gap-[16px] rounded-[9px]">
+                    <img class="w-[104px] h-[104px] md:w-[160px] md:h-[160px]" src="./media/Hp EliteBook 840 G5.png" alt="laptop image">
+                    <div class="flex flex-col text-center items-center gap-[24px]">
+                        <p class="font-medium text-[16px] text-[#000000]">Hp EliteBook 840 G5 Intel Core I5-16GB RAM/1TB <span class="md:hidden">...</span><span class="max-sm:hidden">SSD/Win11</span></p>
+                        <p class="font-semibold text-[24px] text-[#000000]">$500</p>
                         <div>
-                            <button></button>
+                            <button onclick="addToCart('./media/Hp EliteBook 840 G5.png', 'Hp EliteBook 840 G5 Intel Core I5-16GB RAM/1TB SSD/Win11', 500)" class="px-[45px] py-[20px] md:px-[64px] md:py-[12px] rounded-[8px] bg-[#000000] font-medium text-[14px] text-[#FFFFFF] cursor-pointer transition-transform duration-200 hover:scale-105">Buy Now</button>
                         </div>
                     </div>
                 </div>
-                <div>
-                    <img src="" alt="">
-                    <div>
-                        <p></p>
-                        <p></p>
+                <div class="h-[400px] md:h-[420px] bg-[#F6F6F6] px-[16px] py-[24px] flex flex-col items-center gap-[16px] rounded-[9px]">
+                    <img class="w-[104px] h-[104px] md:w-[160px] md:h-[160px]" src="./media/Hp ELITEBOOK X360 830 G8.png" alt="laptop image">
+                    <div class="flex flex-col text-center items-center gap-[24px]">
+                        <p class="font-medium text-[16px] text-[#000000]">Hp ELITEBOOK X360 830 G8 CORE I5 16GB <span class="md:hidden">...</span><span class="max-sm:hidden">RAM/512GB SSD - WIN 11</span></p>
+                        <p class="font-semibold text-[24px] text-[#000000]">$700</p>
                         <div>
-                            <button></button>
+                            <button onclick="addToCart('./media/Hp ELITEBOOK X360 830 G8.png', 'Hp ELITEBOOK X360 830 G8 CORE I5 16GB RAM/512GB SSD - WIN 11', 700)" class="px-[45px] py-[20px] md:px-[64px] md:py-[12px] rounded-[8px] bg-[#000000] font-medium text-[14px] text-[#FFFFFF] cursor-pointer transition-transform duration-200 hover:scale-105">Buy Now</button>
                         </div>
                     </div>
                 </div>
@@ -993,42 +1089,12 @@
 
             <div class="grid grid-cols-4 max-sm:grid-cols-2 items-center gap-[16px]">
                 <div class="h-[400px] md:h-[420px] bg-[#F6F6F6] px-[16px] py-[24px] flex flex-col items-center gap-[16px] rounded-[9px]">
-                    <img class="w-[104px] h-[104px] md:w-[160px] md:h-[160px]" src="./media/Blackmagic Pocket Cinema Camera.png" alt="camera image">
+                    <img class="w-[104px] h-[104px] md:w-[160px] md:h-[160px]" src="./media/Hp EliteBook X360 830 G11.png" alt="laptop image">
                     <div class="flex flex-col text-center items-center gap-[24px]">
-                        <p class="font-medium text-[16px] text-[#000000]">Blackmagic Pocket Cinema Camera 6k</p>
-                        <p class="font-semibold text-[24px] text-[#000000]">$2535</p>
+                        <p class="font-medium text-[16px] text-[#000000]">Hp EliteBook X360 830 G11 13.3, Intel Core I7-155U <span class="md:hidden">...</span><span class="max-sm:hidden">16GBRAM, 512GB SSD, Win 11</span></p>
+                        <p class="font-semibold text-[24px] text-[#000000]">$900</p>
                         <div>
-                            <button onclick="addToCart('./media/Blackmagic Pocket Cinema Camera.png', 'Blackmagic Pocket Cinema Camera 6k', 2535)" class="px-[45px] py-[20px] md:px-[64px] md:py-[12px] rounded-[8px] bg-[#000000] font-medium text-[14px] text-[#FFFFFF] cursor-pointer transition-transform duration-200 hover:scale-105">Buy Now</button>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <img src="" alt="">
-                    <div>
-                        <p></p>
-                        <p></p>
-                        <div>
-                            <button></button>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <img src="" alt="">
-                    <div>
-                        <p></p>
-                        <p></p>
-                        <div>
-                            <button></button>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <img src="" alt="">
-                    <div>
-                        <p></p>
-                        <p></p>
-                        <div>
-                            <button></button>
+                            <button onclick="addToCart('./media/Hp EliteBook X360 830 G11.png', 'Hp EliteBook X360 830 G11 13.3, Intel Core I7-155U 16GB RAM, 512GB SSD, Win 11', 900)" class="px-[45px] py-[20px] md:px-[64px] md:py-[12px] rounded-[8px] bg-[#000000] font-medium text-[14px] text-[#FFFFFF] cursor-pointer transition-transform duration-200 hover:scale-105">Buy Now</button>
                         </div>
                     </div>
                 </div>
@@ -1049,89 +1115,47 @@
         <div class="px-[100px] py-[40px] flex flex-col gap-[32px] max-sm:px-[16px] w-full grid grid-rows-2 gap-[16px]">
             <div class="grid grid-cols-4 max-sm:grid-cols-2 items-center gap-[16px]">
                 <div class="h-[400px] md:h-[420px] bg-[#F6F6F6] px-[16px] py-[24px] flex flex-col items-center gap-[16px] rounded-[9px]">
-                    <img class="w-[104px] h-[104px] md:w-[160px] md:h-[160px]" src="./media/Blackmagic Pocket Cinema Camera.png" alt="camera image">
+                    <img class="w-[104px] h-[104px] md:w-[160px] md:h-[160px]" src="./media/PS4 Controller.png" alt="gaming image">
                     <div class="flex flex-col text-center items-center gap-[24px]">
-                        <p class="font-medium text-[16px] text-[#000000]">Blackmagic Pocket Cinema Camera 6k</p>
-                        <p class="font-semibold text-[24px] text-[#000000]">$2535</p>
+                        <p class="font-medium text-[16px] text-[#000000]">PS4 Controller - Dualshock 4 Wireless PS4 <span class="md:hidden">...</span><span class="max-sm:hidden">Pad - White</span></p>
+                        <p class="font-semibold text-[24px] text-[#000000]">$200</p>
                         <div>
-                            <button onclick="addToCart('./media/Blackmagic Pocket Cinema Camera.png', 'Blackmagic Pocket Cinema Camera 6k', 2535)" class="px-[45px] py-[20px] md:px-[64px] md:py-[12px] rounded-[8px] bg-[#000000] font-medium text-[14px] text-[#FFFFFF] cursor-pointer transition-transform duration-200 hover:scale-105">Buy Now</button>
+                            <button onclick="addToCart('./media/PS4 Controller.png', 'PS4 Controller - Dualshock 4 Wireless PS4 Pad - White', 200)" class="px-[45px] py-[20px] md:px-[64px] md:py-[12px] rounded-[8px] bg-[#000000] font-medium text-[14px] text-[#FFFFFF] cursor-pointer transition-transform duration-200 hover:scale-105">Buy Now</button>
                         </div>
                     </div>
                 </div>
-                <div>
-                    <img src="" alt="">
-                    <div>
-                        <p></p>
-                        <p></p>
+                <div class="h-[400px] md:h-[420px] bg-[#F6F6F6] px-[16px] py-[24px] flex flex-col items-center gap-[16px] rounded-[9px]">
+                    <img class="w-[104px] h-[104px] md:w-[160px] md:h-[160px]" src="./media/Play Station 5.png" alt="gaming image">
+                    <div class="flex flex-col text-center items-center gap-[24px]">
+                        <p class="font-medium text-[16px] text-[#000000]">Sony Computer Play Station 5 Slim Console</p>
+                        <p class="font-semibold text-[24px] text-[#000000]">$1000</p>
                         <div>
-                            <button></button>
+                            <button onclick="addToCart('./media/Play Station 5.png', 'Sony Computer Play Station 5 Slim Console', 1000)" class="px-[45px] py-[20px] md:px-[64px] md:py-[12px] rounded-[8px] bg-[#000000] font-medium text-[14px] text-[#FFFFFF] cursor-pointer transition-transform duration-200 hover:scale-105">Buy Now</button>
                         </div>
                     </div>
                 </div>
-                <div>
-                    <img src="" alt="">
-                    <div>
-                        <p></p>
-                        <p></p>
+                <div class="h-[400px] md:h-[420px] bg-[#F6F6F6] px-[16px] py-[24px] flex flex-col items-center gap-[16px] rounded-[9px]">
+                    <img class="w-[104px] h-[104px] md:w-[160px] md:h-[160px]" src="./media/Dobe PS5 Controller.png" alt="gaming image">
+                    <div class="flex flex-col text-center items-center gap-[24px]">
+                        <p class="font-medium text-[16px] text-[#000000]">Dobe PS5 Controller Pad Dual Charging Dock<span class="md:hidden">...</span><span class="max-sm:hidden">/ Station</span></p>
+                        <p class="font-semibold text-[24px] text-[#000000]">$500</p>
                         <div>
-                            <button></button>
+                            <button onclick="addToCart('./media/Dobe PS5 Controller.png', 'Dobe PS5 Controller Pad Dual Charging Dock/ Station', 500)" class="px-[45px] py-[20px] md:px-[64px] md:py-[12px] rounded-[8px] bg-[#000000] font-medium text-[14px] text-[#FFFFFF] cursor-pointer transition-transform duration-200 hover:scale-105">Buy Now</button>
                         </div>
                     </div>
                 </div>
-                <div>
-                    <img src="" alt="">
-                    <div>
-                        <p></p>
-                        <p></p>
+                <div class="h-[400px] md:h-[420px] bg-[#F6F6F6] px-[16px] py-[24px] flex flex-col items-center gap-[16px] rounded-[9px]">
+                    <img class="w-[104px] h-[104px] md:w-[160px] md:h-[160px]" src="./media/3D VR Headset.png" alt="gaming image">
+                    <div class="flex flex-col text-center items-center gap-[24px]">
+                        <p class="font-medium text-[16px] text-[#000000]">3D VR Headset/Virtual Reality For All <span class="md:hidden">...</span><span class="max-sm:hidden">Phone</span></p>
+                        <p class="font-semibold text-[24px] text-[#000000]">$400</p>
                         <div>
-                            <button></button>
+                            <button onclick="addToCart('./media/3D VR Headset.png', '3D VR Headset/Virtual Reality For All Phone', 400)" class="px-[45px] py-[20px] md:px-[64px] md:py-[12px] rounded-[8px] bg-[#000000] font-medium text-[14px] text-[#FFFFFF] cursor-pointer transition-transform duration-200 hover:scale-105">Buy Now</button>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="grid grid-cols-4 max-sm:grid-cols-2 items-center gap-[16px]">
-                <div class="h-[400px] md:h-[420px] bg-[#F6F6F6] px-[16px] py-[24px] flex flex-col items-center gap-[16px] rounded-[9px]">
-                    <img class="w-[104px] h-[104px] md:w-[160px] md:h-[160px]" src="./media/Blackmagic Pocket Cinema Camera.png" alt="camera image">
-                    <div class="flex flex-col text-center items-center gap-[24px]">
-                        <p class="font-medium text-[16px] text-[#000000]">Blackmagic Pocket Cinema Camera 6k</p>
-                        <p class="font-semibold text-[24px] text-[#000000]">$2535</p>
-                        <div>
-                            <button onclick="addToCart('./media/Blackmagic Pocket Cinema Camera.png', 'Blackmagic Pocket Cinema Camera 6k', 2535)" class="px-[45px] py-[20px] md:px-[64px] md:py-[12px] rounded-[8px] bg-[#000000] font-medium text-[14px] text-[#FFFFFF] cursor-pointer transition-transform duration-200 hover:scale-105">Buy Now</button>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <img src="" alt="">
-                    <div>
-                        <p></p>
-                        <p></p>
-                        <div>
-                            <button></button>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <img src="" alt="">
-                    <div>
-                        <p></p>
-                        <p></p>
-                        <div>
-                            <button></button>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <img src="" alt="">
-                    <div>
-                        <p></p>
-                        <p></p>
-                        <div>
-                            <button></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 
