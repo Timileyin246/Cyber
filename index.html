@@ -62,7 +62,27 @@
                 <a href="#"><li class="text-[16px] font-medium text-[#B5B5B5] hover:text-[#000000]">Blog</li></a>
             </ul>
 
-            <button class="cursor-pointer"><i class="fa-regular fa-user"></i>Profile</button>
+            <div class="relative w-full">
+            <input type="checkbox" id="profile-menu" class="hidden peer/profile">
+
+            <!-- Profile trigger button -->
+            <label for="profile-menu" class="cursor-pointer flex items-center gap-2 text-[16px] font-medium text-[#B5B5B5] hover:text-[#000000] select-none">
+                <i class="fa-regular fa-user"></i>
+                Profile
+                <i class="fa-solid fa-chevron-down text-xs ml-auto transition-transform duration-200 peer-checked/profile:rotate-180"></i>
+            </label>
+
+            <!-- Dropdown panel -->
+            <div class="w-full mt-2 bg-white border border-gray-100 rounded-xl shadow-md overflow-hidden max-h-0 opacity-0 pointer-events-none peer-checked/profile:max-h-40 peer-checked/profile:opacity-100 peer-checked/profile:pointer-events-auto transition-all duration-300 ease-in-out">
+                <div class="p-[10px] flex flex-col gap-[5px]">
+                    <!-- Login -->
+                    <a href="./login.html"class="flex items-center gap-[10px] px-3 py-2 text-sm text-gray-700 font-semibold rounded-lg hover:bg-gray-200 duration-150"><i class="fa-solid fa-arrow-right-to-bracket fa-lg"></i>Log in</a>
+
+                    <!-- Sign Up -->
+                    <a href="./signup.html"class="flex items-center gap-[10px] px-3 py-2 text-sm font-semibold text-white bg-gray-800 rounded-lg hover:bg-gray-700 duration-150"><i class="fa-regular fa-user"></i>Sign up</a>
+                </div>
+            </div>
+        </div>
         </div>
     </nav>
 
