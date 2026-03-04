@@ -27,12 +27,25 @@
         </ul>
         <div class="flex items-center gap-[24px]">
             <button onclick="openCart()" class="cursor-pointer"><i class="fa-solid fa-cart-shopping"></i></button>
-            <button class="cursor-pointer max-sm:hidden"><i class="fa-regular fa-user"></i></button>
+            <div class="relative group">
+                <button class="cursor-pointer max-sm:hidden"><i class="fa-regular fa-user"></i></button>
+
+                <div class="absolute right-2 top-full mt-2 w-36 bg-white border border-gray-200 rounded-xl shadow-lg opacity-0 invisible translate-y-1 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-200 ease-out z-50">
+                    <div class="p-[10px] flex flex-col gap-[5px]">
+                        <!-- Login -->
+                        <a href="./login.html"class="flex items-center gap-[10px] px-3 py-2 text-sm text-gray-700 font-semibold rounded-lg hover:bg-gray-200 duration-150"><i class="fa-solid fa-arrow-right-to-bracket fa-lg"></i>Log in</a>
+
+                        <!-- Sign Up -->
+                        <a href="./signup.html"class="flex items-center gap-[10px] px-3 py-2 text-sm font-semibold text-white bg-gray-800 rounded-lg hover:bg-gray-700 duration-150"><i class="fa-regular fa-user"></i>Sign up</a>
+                    </div>
+                </div>
+            </div>
+            
 
             <label for="mobile-menu" class="md:hidden cursor-pointer">
                 <i class="fa-solid fa-bars"></i>
             </label>
-            
+
         </div>
 
         <!-- Mobile dropdown -->
