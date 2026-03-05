@@ -10,61 +10,61 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Khand:wght@300;400;500;600;700&family=Outfit:wght@100..900&family=Oxygen:wght@300;400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Science+Gothic:wght@100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
-<body class="bg-[#EDEDED]">
-    <a href="./index.html"><i class="fa-solid fa-arrow-left fa-xl ml-[50px] mt-[30px]"></i></a>
+<body class="bg-[#EDEDED] max-sm:bg-[#211C24]">
+    <a href="./index.html"><i class="fa-solid fa-arrow-left fa-xl ml-[50px] mt-[30px] max-sm:ml-[20px] max-sm:mt-[30px] max-sm:text-white"></i></a>
     <div class="flex justify-center">
-        <div class="bg-[#211C24] px-[60px] py-[10px] rounded-lg mb-[40px]">
+        <div class="bg-[#211C24] px-[60px] py-[10px] rounded-lg mb-[40px] max-sm:px-[20px] max-sm:mx-[16px] max-sm:w-full">
             <div class="flex justify-center mb-[30px] mt-[10px]">
                 <img class="w-[96px] h-[32px]" src="./media/logo 2.png" alt="logo">
             </div>
             
             <div class="mb-[20px]">
-                <h1 class="text-[45px] text-[#FFFFFF] font-semibold">Create Account</h1>
-                <p class="text-[#909090] text-[20px] font-medium">Fill in your details to get started with Cyber.</p>
+                <h1 class="text-[45px] text-[#FFFFFF] font-semibold max-sm:text-[32px]">Create Account</h1>
+                <p class="text-[#909090] text-[20px] font-medium max-sm:text-[15px]">Fill in your details to get started with Cyber.</p>
             </div>
             
             <form class="flex flex-col gap-[20px]">
                 <div class="flex flex-col gap-[10px] relative">
-                    <label class="text-[#FFFFFF] text-[15px] font-normal" for="">Full Name</label>
-                    <i class="fa-regular fa-user text-[#909090] absolute top-[60%] left-[1%]"></i>
-                    <input class="bg-[#1C1F27] w-[448px] h-[45px] text-[#909090] pl-[45px] text-[14px] rounded-[8px]" type="text" placeholder="John Doe" required>
+                    <label class="text-[#FFFFFF] text-[15px] font-normal" for="Full Name">Full Name</label>
+                    <i class="fa-regular fa-user text-[#909090] absolute top-[60%] left-[1%] max-sm:left-[3%]"></i>
+                    <input class="bg-[#1C1F27] w-[448px] h-[45px] text-[#909090] pl-[45px] text-[15px] rounded-[8px] max-sm:w-full" type="text" name="Full Name" id="Full Name" placeholder="John Doe" required>
                 </div>
                 <div class="flex flex-col gap-[10px] relative">
-                    <label class="text-[#FFFFFF] text-[15px] font-normal" for="">Email Address</label>
-                    <i class="fa-regular fa-envelope text-[#909090] absolute top-[60%] left-[1%]"></i>
-                    <input class="bg-[#1C1F27] w-[448px] h-[45px] text-[#909090] pl-[45px] text-[14px] rounded-[8px]" type="email" name="" id="" placeholder="name@example.com" required>
+                    <label class="text-[#FFFFFF] text-[15px] font-normal" for="Email Address">Email Address</label>
+                    <i class="fa-regular fa-envelope text-[#909090] absolute top-[60%] left-[1%] max-sm:left-[3%]"></i>
+                    <input class="bg-[#1C1F27] w-[448px] h-[45px] text-[#909090] pl-[45px] text-[15px] rounded-[8px] max-sm:w-full" type="email" name="Email Address" id="Email Address" placeholder="name@example.com" required>
                 </div>
                 <div class="flex gap-[20px]">
                     <div class="flex flex-col gap-[10px] relative">
-                        <label class="text-[#FFFFFF] text-[15px] font-normal" for="">Password</label>
-                        <i class="fa-solid fa-lock text-[#909090] absolute top-[60%] left-[5%]"></i>
-                        <input class="bg-[#1C1F27] w-[214px] h-[45px] text-[#909090] pl-[45px] text-[14px] rounded-[8px]" type="password" name="" id="" placeholder="........" required>
+                        <label class="text-[#FFFFFF] text-[15px] font-normal" for="Password">Password</label>
+                        <i class="fa-solid fa-lock text-[#909090] absolute top-[60%] left-[5%] max-sm:left-[3%]"></i>
+                        <input class="bg-[#1C1F27] w-[214px] h-[45px] text-[#909090] pl-[45px] text-[16px] rounded-[8px] max-sm:w-full" type="password" name="Password" id="Password" placeholder="········" required>
                     </div>
                     <div class="flex flex-col gap-[10px] relative">
-                        <label class="text-[#FFFFFF] text-[15px] font-normal" for="">Confirm Password</label>
-                        <i class="fa-solid fa-lock text-[#909090] absolute top-[60%] left-[5%]"></i>
-                        <input class="bg-[#1C1F27] w-[214px] h-[45px] text-[#909090] pl-[45px] text-[14px] rounded-[8px]" type="password" name="" id="" placeholder="........" required>
+                        <label class="text-[#FFFFFF] text-[15px] font-normal" for="Confirm Password">Confirm Password</label>
+                        <i class="fa-solid fa-lock text-[#909090] absolute top-[60%] left-[5%] max-sm:left-[3%]"></i>
+                        <input class="bg-[#1C1F27] w-[214px] h-[45px] text-[#909090] pl-[45px] text-[16px] rounded-[8px] max-sm:w-full" type="password" name="Confirm Password" id="Confirm Password" placeholder="········" required>
                     </div>
                 </div>
                 <div class="flex gap-[10px]">
-                    <input class="" type="checkbox" name="" id="">
-                    <p class="text-[#FFFFFF] text-[15px] font-medium">I agree to the <a class="text-blue-500 underline" href="">Terms of Service</a> and <a class="text-blue-500 underline" href="">Privacy Policy</a></p>
+                    <input type="checkbox">
+                    <p class="text-[#FFFFFF] text-[15px] font-medium max-sm:text-[13px]">I agree to the <a class="text-blue-500 underline" href="">Terms of Service</a> and <a class="text-blue-500 underline" href="">Privacy Policy</a></p>
                 </div>
             </form>
             <div>
-                <button class="rounded-[12px] w-[448px] py-[15px] bg-[#EDEDED] mt-[20px] text-[18px] font-semibold text-center text-[#000000] hover:bg-[#DEDEDE] cursor-pointer">Create Account<i class="fa-solid fa-arrow-right ml-[15px] text-center"></i></button>
+                <button class="rounded-[12px] w-[448px] py-[15px] bg-[#EDEDED] mt-[20px] text-[18px] font-semibold text-center text-[#000000] hover:bg-[#DEDEDE] cursor-pointer max-sm:text-[16px] max-sm:w-full">Create Account<i class="fa-solid fa-arrow-right ml-[15px] text-center"></i></button>
             </div>
             
             <div class="flex my-[10px] items-center">
-                <span class="border-b w-[160px] border-white items-center"></span>
-                <p class="text-[#FFFFFF] text-[14px] px-[10px]">Or continue with</p>
-                <span class="border-b w-[160px] border-white"></span>
+                <span class="border-b w-[160px] border-white items-center max-sm:flex-1"></span>
+                <p class="text-[#FFFFFF] text-[14px] px-[10px] max-sm:text-[12px]">Or continue with</p>
+                <span class="border-b w-[160px] border-white max-sm:flex-1"></span>
             </div>
-            <div class="flex gap-[20px]">
-                <button class="rounded-[12px] w-[214px] py-[15px] bg-white text-[15px] font-regular text-center text-[#000000] hover:bg-[#EDEDED] cursor-pointer"><i class="fa-brands fa-google mr-[10px]"></i> Google</button>
-                <button class="rounded-[12px] w-[214px] py-[15px] bg-black text-[15px] font-regular text-center text-[#FFFFFF] hover:bg-[#A1A1A1] cursor-pointer"><i class="fa-brands fa-apple mr-[10px]"></i>Apple</button>
+            <div class="flex gap-[20px] max-sm:gap-[12px]">
+                <button class="rounded-[12px] w-[214px] py-[15px] bg-white text-[15px] font-regular text-center text-[#000000] hover:bg-[#EDEDED] cursor-pointer max-sm:text-[14px] max-sm:py-[12px]"><i class="fa-brands fa-google mr-[10px]"></i> Google</button>
+                <button class="rounded-[12px] w-[214px] py-[15px] bg-black text-[15px] font-regular text-center text-[#FFFFFF] hover:bg-[#A1A1A1] cursor-pointer max-sm:text-[14px] max-sm:py-[12px]"><i class="fa-brands fa-apple mr-[10px]"></i>Apple</button>
             </div>
-            <p class="text-[#FFFFFF] text-[14px] mt-[10px] text-center">Already have an account ? <a class="text-blue-500 underline" href="./login.html">Sign In</a></p>
+            <p class="text-[#FFFFFF] text-[14px] mt-[10px] text-center max-sm:text-[13px] max-sm:mb-[10px]">Already have an account ? <a class="text-blue-500 underline" href="./login.html">Sign In</a></p>
         </div>
     </div>
 </body>
