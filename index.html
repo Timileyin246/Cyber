@@ -17,7 +17,7 @@
         <img class="w-[96px] h-[32px]" src="./media/logo 1.png" alt="logo">
         <div class="relative max-sm:hidden">
             <i class="fa-solid fa-magnifying-glass fa-lg text-[#989898] absolute top-[52%] left-[5%]"></i>
-            <input class="w-[372px] h-[56px] bg-[#F5F5F5] rounded-[8px] px-[50px] text-[#656565] text-[14px] font-medium" type="text" placeholder="search">
+            <input class="searchInput w-[372px] h-[56px] bg-[#F5F5F5] rounded-[8px] px-[50px] text-[#656565] text-[14px] font-medium" type="text" placeholder="search">
         </div>
         <ul class="flex items-center gap-[30px] max-sm:hidden">
             <a href="#"><li class="text-[16px] font-medium text-[#B5B5B5] hover:text-[#000000]">Home</li></a>
@@ -26,7 +26,10 @@
             <a href="#"><li class="text-[16px] font-medium text-[#B5B5B5] hover:text-[#000000]">Blog</li></a>
         </ul>
         <div class="flex items-center gap-[24px]">
-            <button onclick="openCart()" class="cursor-pointer"><i class="fa-solid fa-cart-shopping"></i></button>
+            <button onclick="openCart()" class="cursor-pointer relative">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span id="cartCount" class="hidden absolute -top-2 -right-2 bg-red-500 text-white text-[10px] font-bold rounded-full w-4 h-4 flex items-center justify-center">0</span>
+            </button>
             <div class="relative group">
                 <button class="cursor-pointer max-sm:hidden"><i class="fa-regular fa-user"></i></button>
 
@@ -53,7 +56,7 @@
         <div class="hidden max-sm:flex flex-col items-start gap-[20px] absolute top-[72px] left-0 right-0 bg-[#FFFFFF] px-[16px] py-[24px] shadow-md z-50 max-h-0 overflow-hidden opacity-0 peer-checked:max-h-[500px] peer-checked:opacity-100">
             <div class="relative w-full">
                 <i class="fa-solid fa-magnifying-glass fa-lg text-[#989898] absolute top-[50%] -translate-y-1/2 left-[14px]"></i>
-                <input class="w-full h-[56px] bg-[#F5F5F5] rounded-[8px] px-[50px] text-[#656565] text-[14px] font-medium" type="text" placeholder="search">
+                <input class="searchInput w-full h-[56px] bg-[#F5F5F5] rounded-[8px] px-[50px] text-[#656565] text-[14px] font-medium" type="text" placeholder="search">
             </div>
             <ul class="flex flex-col gap-[16px] w-full">
                 <a href="#"><li class="text-[16px] font-medium text-[#B5B5B5] hover:text-[#000000]">Home</li></a>
@@ -63,26 +66,26 @@
             </ul>
 
             <div class="relative w-full">
-            <input type="checkbox" id="profile-menu" class="hidden peer/profile">
+                <input type="checkbox" id="profile-menu" class="hidden peer/profile">
 
-            <!-- Profile trigger button -->
-            <label for="profile-menu" class="cursor-pointer flex items-center gap-2 text-[16px] font-medium text-[#B5B5B5] hover:text-[#000000] select-none">
-                <i class="fa-regular fa-user"></i>
-                Profile
-                <i class="fa-solid fa-chevron-down text-xs ml-auto transition-transform duration-200 peer-checked/profile:rotate-180"></i>
-            </label>
+                <!-- Profile trigger button -->
+                <label for="profile-menu" class="cursor-pointer flex items-center gap-2 text-[16px] font-medium text-[#B5B5B5] hover:text-[#000000] select-none">
+                    <i class="fa-regular fa-user"></i>
+                    Profile
+                    <i class="fa-solid fa-chevron-down text-xs ml-auto transition-transform duration-200 peer-checked/profile:rotate-180"></i>
+                </label>
 
-            <!-- Dropdown panel -->
-            <div class="w-full mt-2 bg-white border border-gray-100 rounded-xl shadow-md overflow-hidden max-h-0 opacity-0 pointer-events-none peer-checked/profile:max-h-40 peer-checked/profile:opacity-100 peer-checked/profile:pointer-events-auto transition-all duration-300 ease-in-out">
-                <div class="p-[10px] flex flex-col gap-[5px]">
-                    <!-- Login -->
-                    <a href="./login.html"class="flex items-center gap-[10px] px-3 py-2 text-sm text-gray-700 font-semibold rounded-lg hover:bg-gray-200 duration-150"><i class="fa-solid fa-arrow-right-to-bracket fa-lg"></i>Log in</a>
+                <!-- Dropdown panel -->
+                <div class="w-full mt-2 bg-white border border-gray-100 rounded-xl shadow-md overflow-hidden max-h-0 opacity-0 pointer-events-none peer-checked/profile:max-h-40 peer-checked/profile:opacity-100 peer-checked/profile:pointer-events-auto transition-all duration-300 ease-in-out">
+                    <div class="p-[10px] flex flex-col gap-[5px]">
+                        <!-- Login -->
+                        <a href="./login.html"class="flex items-center gap-[10px] px-3 py-2 text-sm text-gray-700 font-semibold rounded-lg hover:bg-gray-200 duration-150"><i class="fa-solid fa-arrow-right-to-bracket fa-lg"></i>Log in</a>
 
-                    <!-- Sign Up -->
-                    <a href="./signup.html"class="flex items-center gap-[10px] px-3 py-2 text-sm font-semibold text-white bg-gray-800 rounded-lg hover:bg-gray-700 duration-150"><i class="fa-regular fa-user"></i>Sign up</a>
+                        <!-- Sign Up -->
+                        <a href="./signup.html"class="flex items-center gap-[10px] px-3 py-2 text-sm font-semibold text-white bg-gray-800 rounded-lg hover:bg-gray-700 duration-150"><i class="fa-regular fa-user"></i>Sign up</a>
+                    </div>
                 </div>
             </div>
-        </div>
         </div>
     </nav>
 
@@ -287,7 +290,7 @@
     </div>
     
     <!-- Sidebar -->
-    <div id="cartSidebar" class="fixed top-0 right-0 h-full w-100 bg-white shadow-lg transform translate-x-full transition-transform duration-300 ease-in-out z-50 p-[25px] overflow-y-scroll">
+    <div id="cartSidebar" class="fixed top-0 right-0 h-full w-96 bg-white shadow-lg transform translate-x-full transition-transform duration-300 ease-in-out z-50 p-[25px] overflow-y-scroll">
         <!-- Cart header -->
         <div class="px-[25px] py-[10px] flex justify-between items-center">
             <h1 class="font-semibold text-[20px]">Shopping Cart</h1>
@@ -1190,6 +1193,15 @@
             </div>
 
         </div>
+    </div>
+
+    <!-- Search bar -->
+    <div id="searchResults" class="hidden pt-[10px]">
+        <div class="px-[100px] max-sm:px-[16px] py-[20px]">
+            <p class="text-[#B5B5B5] text-[16px] font-medium">Search results for: <span id="searchQuery" class="text-[#000000]"></span></p>
+        </div>
+        <div id="searchResultsGrid" class="px-[100px] max-sm:px-[16px] py-[40px] grid grid-cols-4 max-sm:grid-cols-2 gap-[16px]"></div>
+        <p id="noResults" class="hidden text-center text-[#787878] text-[18px] py-[40px]">No products found.</p>
     </div>
 
     <script src="./script.js"></script>
